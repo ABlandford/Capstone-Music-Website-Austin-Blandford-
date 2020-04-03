@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>306</x>
-      <y>423</y>
+      <x>405</x>
+      <y>450</y>
       <w>189</w>
       <h>288</h>
     </coordinates>
@@ -35,8 +35,8 @@ searchBy : String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>18</x>
-      <y>117</y>
+      <x>90</x>
+      <y>54</y>
       <w>189</w>
       <h>252</h>
     </coordinates>
@@ -63,8 +63,8 @@ redirect : null
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>414</x>
-      <y>45</y>
+      <x>558</x>
+      <y>27</y>
       <w>189</w>
       <h>126</h>
     </coordinates>
@@ -83,8 +83,8 @@ redirect : null
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>531</x>
-      <y>486</y>
+      <x>738</x>
+      <y>477</y>
       <w>189</w>
       <h>216</h>
     </coordinates>
@@ -109,43 +109,43 @@ tabs : String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>198</x>
-      <y>90</y>
-      <w>234</w>
-      <h>126</h>
+      <x>270</x>
+      <y>72</y>
+      <w>306</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>240.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>320.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>162</y>
-      <w>108</w>
-      <h>279</h>
+      <x>495</x>
+      <y>144</y>
+      <w>153</w>
+      <h>324</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>100.0;10.0;10.0;290.0</additional_attributes>
+    <additional_attributes>150.0;10.0;10.0;340.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>567</x>
-      <y>162</y>
-      <w>63</w>
-      <h>342</h>
+      <x>711</x>
+      <y>144</y>
+      <w>126</w>
+      <h>351</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;360.0</additional_attributes>
+    <additional_attributes>10.0;10.0;120.0;370.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>855</x>
-      <y>144</y>
+      <x>1080</x>
+      <y>72</y>
       <w>189</w>
-      <h>279</h>
+      <h>288</h>
     </coordinates>
     <panel_attributes>Playlist.js
 --
@@ -159,6 +159,7 @@ userId : String
 
 --
 
++ createPlaylist()
 + redirect(path)
 + ratingUpdate(event)
 + reviewUpdate(event)
@@ -172,19 +173,19 @@ userId : String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>594</x>
-      <y>72</y>
-      <w>279</w>
-      <h>180</h>
+      <x>738</x>
+      <y>63</y>
+      <w>360</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;290.0;180.0</additional_attributes>
+    <additional_attributes>10.0;10.0;380.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>45</x>
-      <y>423</y>
+      <x>126</x>
+      <y>396</y>
       <w>189</w>
       <h>333</h>
     </coordinates>
@@ -217,21 +218,21 @@ redirect : null
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>189</x>
-      <y>144</y>
-      <w>243</w>
-      <h>297</h>
+      <x>270</x>
+      <y>126</y>
+      <w>306</w>
+      <h>288</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>250.0;10.0;10.0;310.0</additional_attributes>
+    <additional_attributes>320.0;10.0;10.0;300.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>783</x>
-      <y>486</y>
+      <x>1026</x>
+      <y>450</y>
       <w>189</w>
-      <h>216</h>
+      <h>234</h>
     </coordinates>
     <panel_attributes>Account.js
 --
@@ -242,6 +243,7 @@ playlists : Array
 
 --
 
++ createPlaylist()
 + editAccount()
 + deleteAccount()
 + redirect(path)
@@ -254,12 +256,12 @@ playlists : Array
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>594</x>
-      <y>135</y>
-      <w>243</w>
-      <h>369</h>
+      <x>738</x>
+      <y>117</y>
+      <w>342</w>
+      <h>351</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;250.0;390.0</additional_attributes>
+    <additional_attributes>10.0;10.0;360.0;370.0</additional_attributes>
   </element>
 </diagram>
