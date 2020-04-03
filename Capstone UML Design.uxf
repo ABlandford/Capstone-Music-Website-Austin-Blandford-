@@ -1,88 +1,228 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>190</x>
-      <y>200</y>
-      <w>230</w>
-      <h>140</h>
+      <x>360</x>
+      <y>423</y>
+      <w>189</w>
+      <h>288</h>
     </coordinates>
-    <panel_attributes>User
+    <panel_attributes>Home.js
 --
-_id: String(provided by MongoDB)
-username: String
-password: String
-fname: String
-lname: String
-email: String</panel_attributes>
+
+redirect : null
+currentUser : Object
+searchValue : String
+songs : Array
+popularSongs : Array
+searchBy : String
+
+--
+
++ logout()
++ redirect(path)
++ redirectToSong(lyricId, songId)
++ searchSongs()
++ searchUpdate(event)
++ componentDidMount()
++ render() : div
+
+--</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>650</x>
-      <y>210</y>
-      <w>230</w>
-      <h>90</h>
+      <x>9</x>
+      <y>117</y>
+      <w>189</w>
+      <h>252</h>
     </coordinates>
-    <panel_attributes>Playlist
+    <panel_attributes>Login.js
 --
-_id: String(provided by MongoDB)
-songs: Array
-userId: String</panel_attributes>
+
+username : String
+password : String
+potValue : String
+redirect : null
+
+--
+
++ validateLogin()
++ unameUpdate(event)
++ passUpdate(event)
++ botUpdate(event)
++ componentDidMount()
++ render() : div
+
+--</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>410</x>
-      <y>440</y>
-      <w>230</w>
-      <h>150</h>
+      <x>405</x>
+      <y>45</y>
+      <w>189</w>
+      <h>126</h>
     </coordinates>
-    <panel_attributes>Review
+    <panel_attributes>App.js
 --
-_id: String(provided by MongoDB)
-username: String
-rating: Int
-review: String
-userId: String
-playlistId: String</panel_attributes>
+
+
+
+--
+
++ App() : Router
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>423</y>
+      <w>189</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>Song.js
+--
+
+redirect : null
+song : Object
+lyrics : String
+tabs : String
+
+--
+
++ redirect(path)
++ addToPlaylist()
++ componentDidMount()
++ render() : div
+
+--</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>290</x>
-      <y>340</y>
-      <w>140</w>
-      <h>220</h>
+      <x>189</x>
+      <y>90</y>
+      <w>234</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;120.0;200.0</additional_attributes>
+    <additional_attributes>240.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>300</y>
-      <w>180</w>
-      <h>240</h>
+      <x>450</x>
+      <y>162</y>
+      <w>72</w>
+      <h>279</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>160.0;10.0;10.0;220.0</additional_attributes>
+    <additional_attributes>60.0;10.0;10.0;290.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>240</y>
-      <w>250</w>
-      <h>60</h>
+      <x>585</x>
+      <y>144</y>
+      <w>126</w>
+      <h>297</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;40.0;230.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;120.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>45</y>
+      <w>189</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>Playlist.js
+--
+
+redirect : null
+songs : Array
+reviews : Array
+reviewVal : String
+rating : Int
+userId : String
+
+--
+
++ redirect(path)
++ ratingUpdate(event)
++ reviewUpdate(event)
++ submitReview()
++ componentDidMount()
++ render() : div
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>585</x>
+      <y>108</y>
+      <w>243</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>36</x>
+      <y>423</y>
+      <w>189</w>
+      <h>333</h>
+    </coordinates>
+    <panel_attributes>Register.js
+--
+
+username : String
+password : String
+email : String
+fname : String
+lname : String
+potValue : String
+redirect : null
+
+--
+
++ validateRegister()
++ unameUpdate(event)
++ passUpdate(event)
++ emailUpdate(event)
++ fnameUpdate(event)
++ lnameUpdate(event)
++ botUpdate(event)
++ componentDidMount()
++ render() : div
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>144</y>
+      <w>243</w>
+      <h>297</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;310.0</additional_attributes>
   </element>
 </diagram>
