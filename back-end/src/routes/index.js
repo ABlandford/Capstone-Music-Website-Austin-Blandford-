@@ -1,9 +1,9 @@
-const express = require('express');
+const user = require('./user');
+const playlist = require('./playlist');
+const review = require('./review');
 
-const router = express.Router();
-
-router.get('/', (req, res) => {
-    res.send('Welcome to the MusicHub backend!');
-})
-
-module.exports = router
+module.exports = {
+    user,
+    playlist,
+    review
+}
