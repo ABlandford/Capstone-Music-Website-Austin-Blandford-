@@ -24,6 +24,34 @@ const userSchema = mongoose.Schema({
 
 const User = mongoose.model('users', userSchema);
 
+router.post('/login', (req, res) => {
+    console.log('Validating login...');
+    
+    if(req.body.username != null && req.body.password != null) {
+        let login = false;
+        User.findOne({ username: req.body.username }, function(err, user) {
+            if(!user) {
+                let message = "The USERNAME you entered is not in our database. Please try again.";
+                res.send({ status: login, statusMessage: message });
+            } else if(user) {
+                bcrypt.compare(req.body.password, user.password).then(result => {
+                    if(result == true) {
+                        login = !login;
+                        res.send({ status: login, user: user });
+                    } else {
+                        let message = "The PASSWORD you entered does not match this username. Please try again.";
+                        res.send({ status: login, statusMessage: message });
+                    }
+                });
+            }
+        });
+    } else {
+        let login = false;
+        let message = "The fields you entered have invalid values. Please enter a proper username and password.";
+        res.send({ status: login, statusMessage: message })
+    }
+});
+
 router.post('/register', (req, res) => {
     console.log('Checking data...');
     let errors = false;
@@ -34,6 +62,10 @@ router.post('/register', (req, res) => {
     if(!req.body.username) {
         errors = true;
         error_message += '\nThe username you entered is invalid. Please enter a username to register for Music Hub.\n';
+    }
+    if(!req.body.password) {
+        errors = true;
+        error_message += '\nThe password field is empty. Please enter a password to secure your account.\n';
     }
     if(!email_check.test(req.body.email)) {
         errors = true;
@@ -67,6 +99,6 @@ router.post('/register', (req, res) => {
             return res.send({ error_check: errors, user: newUser });
         })
     }
-})
+});
 
 module.exports = router;
