@@ -12,6 +12,7 @@ app.use(bodyparser.urlencoded({ extended: true }))
 
 app.use('/user', routes.user);
 app.use('/playlist', routes.playlist);
+app.use('/tracks', routes.tracks);
 app.use('/review', routes.review);
 
 app.get('/', (req, res) => {
