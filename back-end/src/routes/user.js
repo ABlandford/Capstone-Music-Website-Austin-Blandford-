@@ -8,8 +8,6 @@ const saltRounds = 10;
 
 const router = express.Router();
 
-router.use(cors());
-
 const client_id = '2160308cf13f44cfa5821df71c80338a';
 const redirect_uri = 'http://localhost:9000/user/callback';
 
@@ -52,11 +50,11 @@ router.post('/login', (req, res) => {
                         //         client_id: client_id,
                         //         redirect_uri: redirect_uri
                         //     }));
-                        
+                            
                         // request.get(`http://accounts.spotify.com/authorize?client_id=${client_id}&response_type=code&redirect_uri=${redirect_uri}&scope=user-modify-playback-state`, (error, response, body) => {
-                        //     console.log(body);
-                        // })
-                        
+                            //     console.log(body);
+                            // })
+                            
                         res.send({ status: login, user: user });
                     } else {
                         let message = "The PASSWORD you entered does not match this username. Please try again.";

@@ -30,8 +30,7 @@ router.post('/getTracks', (req, res) => {
 
             request.get(opt1, (error, response, body) => {
                 console.log(response.body.tracks.items[0].uri);
-                let trackURL = encodeURI(response.body.tracks.items[0].uri)
-                res.send({ track: trackURL });
+                res.send({ track: response.body.tracks.items[0].uri });
             })
         }
     })
