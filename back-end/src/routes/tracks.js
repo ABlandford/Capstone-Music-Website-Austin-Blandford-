@@ -15,6 +15,60 @@ const authOptions = {
     json: true
 }
 
+router.post('/searchByTitle', (req, res) => {
+    request.post(authOptions, (error, response, body) => {
+        if (!error && response.statusCode === 200) {
+            let token = body.access_token;
+            console.log(token);
+            console.log(`Search Term: ${ req.body.title }`);
+            let query = {
+                url: `https://api.spotify.com/v1/search?q=track:${req.body.title}&type=track&limit=50`,
+                headers: {
+                    'Authorization': `Bearer ${ token }`
+                },
+                json: true
+            };
+
+            request.get(query, (error, response, body) => {
+                if(!error && response.statusCode === 200) {
+                    console.log(response.body.tracks.items);
+                    res.send({ noResult: false, tracks: response.body.tracks.items });
+                } else {
+                    console.log(response);
+                    res.send({ noResults: true, message: 'No results found. Please check your search term and try again.' });
+                }
+            })
+        }
+    })
+})
+
+router.post('/searchByArtist', (req, res) => {
+    request.post(authOptions, (error, response, body) => {
+        if (!error && response.statusCode === 200) {
+            let token = body.access_token;
+            console.log(token);
+            console.log(`Search Term: ${ req.body.artist }`);
+            let query = {
+                url: `https://api.spotify.com/v1/search?q=artist:${req.body.artist}&type=track&limit=50`,
+                headers: {
+                    'Authorization': `Bearer ${ token }`
+                },
+                json: true
+            };
+
+            request.get(query, (error, response, body) => {
+                if(!error && response.statusCode === 200) {
+                    console.log(response.body.tracks.items);
+                    res.send({ noResult: false, tracks: response.body.tracks.items });
+                } else {
+                    console.log(response);
+                    res.send({ noResults: true, message: 'No results found. Please check your search term and try again.' });
+                }
+            })
+        }
+    })
+})
+
 router.post('/getTracks', (req, res) => {
     request.post(authOptions, (error, response, body) => {
         if (!error && response.statusCode === 200) {
@@ -29,15 +83,15 @@ router.post('/getTracks', (req, res) => {
             };
 
             request.get(opt1, (error, response, body) => {
-                console.log(response.body.tracks.items[0].uri);
-                res.send({ track: response.body.tracks.items[0].uri });
+                if (!error && response.statusCode === 200) {
+                    console.log(response.body.tracks.items);
+                    res.send({ noResult: false, tracks: response.body.tracks.items });
+                } else {
+                    res.send({ noResult: true, message: 'No result found.' });
+                }
             })
         }
     })
 })
-
-// router.post('/search', (req, res) => {
-//     request
-// })
 
 module.exports = router;
