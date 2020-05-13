@@ -1,15 +1,9 @@
 const express = require('express');
-const request = require('request');
-const cors = require('cors');
 const mongoose = require('mongoose');
-const querystring = require('querystring');
 const bcrypt = require('bcryptjs');
 const saltRounds = 10;
 
 const router = express.Router();
-
-const client_id = '2160308cf13f44cfa5821df71c80338a';
-const redirect_uri = 'http://localhost:9000/user/callback';
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/music_hub');
@@ -43,18 +37,7 @@ router.post('/login', (req, res) => {
             } else if(user) {
                 bcrypt.compare(req.body.password, user.password).then(result => {
                     if(result == true) {
-                        login = !login;
-                        // res.redirect('https://accounts.spotify.com/authorize?' + 
-                        //     querystring.stringify({
-                        //         response_type: 'code',
-                        //         client_id: client_id,
-                        //         redirect_uri: redirect_uri
-                        //     }));
-                            
-                        // request.get(`http://accounts.spotify.com/authorize?client_id=${client_id}&response_type=code&redirect_uri=${redirect_uri}&scope=user-modify-playback-state`, (error, response, body) => {
-                            //     console.log(body);
-                            // })
-                            
+                        login = !login;                            
                         res.send({ status: login, user: user });
                     } else {
                         let message = "The PASSWORD you entered does not match this username. Please try again.";
@@ -159,32 +142,6 @@ router.put('/editAccount', (req, res) => {
             })
         })
     }
-})
-
-router.get('/callback', (req, res) => {
-    let code = req.query.code
-
-    let authOptions = {
-        url: 'https://accounts.spotify.com/api/token',
-        form: {
-            code: code,
-            redirect: redirect_uri,
-            grant_type: 'authorization_code'
-        },
-        headers: {
-            'Authorization': `Basic ${encodedID}`
-        },
-        json: true
-    };
-
-    request.post(authOptions, (error, response, body) => {
-        if(!error && response.statusCode === 200) {
-            let accessToken = body.accessToken;
-            let refreshToken = body.refreshToken;
-
-            res.send({ access: accessToken, refresh: refreshToken });
-        }
-    })
 })
 
 module.exports = router;

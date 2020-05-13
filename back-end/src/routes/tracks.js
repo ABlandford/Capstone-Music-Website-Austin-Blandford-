@@ -84,7 +84,7 @@ router.post('/getTracks', (req, res) => {
 
             request.get(opt1, (error, response, body) => {
                 if (!error && response.statusCode === 200) {
-                    console.log(response.body.tracks.items);
+                    // console.log(response.body.tracks.items);
                     res.send({ noResult: false, tracks: response.body.tracks.items });
                 } else {
                     res.send({ noResult: true, message: 'No result found.' });
