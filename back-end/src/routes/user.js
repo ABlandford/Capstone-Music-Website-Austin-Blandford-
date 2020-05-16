@@ -14,12 +14,21 @@ mdb.once('open', (callback) => {
 
 })
 
+const favoriteSchema = mongoose.Schema({
+    songId: String,
+    title: String,
+    artist: String,
+    album: String,
+    albumCover: String
+})
+
 const userSchema = mongoose.Schema({
     username: String,
     password: String,
     email: String,
     fname: String,
-    lname: String
+    lname: String,
+    favorites: [favoriteSchema]
 });
 
 const User = mongoose.model('users', userSchema);
@@ -89,7 +98,8 @@ router.post('/register', (req, res) => {
                 password: hash,
                 email: req.body.email,
                 fname: req.body.fname,
-                lname: req.body.lname
+                lname: req.body.lname,
+                favorites: []
             })
 
             newUser.save((err, user) => {
@@ -142,6 +152,32 @@ router.put('/editAccount', (req, res) => {
             })
         })
     }
+})
+
+router.put('/addFavorite', (req, res) => {
+    console.log(`Adding song titled ${ req.body.title } to the favorites of user ${ req.body.userId }`)
+    
+    let newFavorite = { songId: req.body.songId, title: req.body.title, artist: req.body.artist, album: req.body.album, albumCover: req.body.albumCover }
+    
+    User.findById(req.body.userId, (err, user) => {
+        if(err) return console.log(err);
+
+        user.favorites.push(newFavorite);
+
+        user.save((err, savedFavorite) => {
+            if(err) return console.log(err);
+            console.log('Saved new favorite song.')
+            return res.send({ response: 'Song saved into user favorites.' });
+        })
+    })
+})
+
+router.post('/getFavorites', (req, res) => {
+    User.findOne({ _id: req.body.userId }, (err, user) => {
+        if(err) return console.log(err);
+
+        res.send({ favorites: user.favorites })
+    })
 })
 
 module.exports = router;
