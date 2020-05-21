@@ -157,10 +157,16 @@ router.put('/editAccount', (req, res) => {
 router.put('/addFavorite', (req, res) => {
     console.log(`Adding song titled ${ req.body.title } to the favorites of user ${ req.body.userId }`)
     
-    let newFavorite = { songId: req.body.songId, title: req.body.title, artist: req.body.artist, album: req.body.album, albumCover: req.body.albumCover }
-    
     User.findById(req.body.userId, (err, user) => {
         if(err) return console.log(err);
+        
+        for(let i = 0; i < user.favorites.length; i++) {
+            if(user.favorites[i].songId == req.body.songId) {
+                return res.send({ response: 'You already have this song saved as a favorite. To unfavorite, please do so from you favorites list.' })
+            } 
+        }
+
+        let newFavorite = { songId: req.body.songId, title: req.body.title, artist: req.body.artist, album: req.body.album, albumCover: req.body.albumCover }
 
         user.favorites.push(newFavorite);
 
@@ -177,6 +183,27 @@ router.post('/getFavorites', (req, res) => {
         if(err) return console.log(err);
 
         res.send({ favorites: user.favorites })
+    })
+})
+
+router.put('/deleteFavorite', (req, res) => {
+    console.log("Deleting song from user's favorites.");
+
+    User.findById(req.body.userId, (err, user) => {
+        if(err) return console.log(err);
+
+        for(let i = 0; i < user.favorites.length; i++) {
+            if(user.favorites[i].songId == req.body.songId) {
+                user.favorites.splice(i, 1);
+
+                user.save((err, saved) => {
+                    if(err) return console.log(err);
+                    console.log("User's favorite list updated.");
+                    return res.send({ success: true })
+                })
+            }
+        }
+
     })
 })
 
