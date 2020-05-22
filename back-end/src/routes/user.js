@@ -114,6 +114,9 @@ router.post('/register', (req, res) => {
 
 router.put('/editAccount', (req, res) => {
     console.log('Validating data...');
+
+    console.log(req.body);
+    
     let errors = false;
     let error_message = "";
     let name_check = /[a-z]{2,}/i;
@@ -204,6 +207,14 @@ router.put('/deleteFavorite', (req, res) => {
             }
         }
 
+    })
+})
+
+router.delete('/deleteUser', (req, res) => {
+    User.findByIdAndDelete(req.body.userId, (err, user) => {
+        if(err) return res.status(500).send("There was a problem deleting the user.");
+
+        res.send({ result: true })
     })
 })
 
