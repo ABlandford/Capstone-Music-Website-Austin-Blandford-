@@ -114,8 +114,6 @@ router.post('/register', (req, res) => {
 
 router.put('/editAccount', (req, res) => {
     console.log('Validating data...');
-
-    console.log(req.body);
     
     let errors = false;
     let error_message = "";
