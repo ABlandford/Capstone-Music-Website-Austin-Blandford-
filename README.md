@@ -13,11 +13,39 @@ If you know how to navigate Github, then you should be able to figure out how to
 
 Once you have the zip file downloaded to your machine, you want to go to where it was downloaded and then unzip it using your choice of zipping software. I would personally recommend [7zip(click to get 7zip)](https://www.7-zip.org/download.html) myself if you don't have one yet. Once you have the file unzipped, then you can get started.
 
-**Step 2: Start the Code**
+**Step 2: Install NPM**
 
-Starting up the code is a simple and straight-forward process. First, you want to see if you have npm installed in your machine. To see if you have it installed, press the Window key on your keyboard if you are using Windows and type in __"cmd."__ If you did this, you should see a **Command Prompt** program selected. If you do see this, then press enter to open the Command Prompt. See the screenshot below for a visual:
+To start up the code of Music Hub you want to see if you have npm installed in your machine. To see if you have it installed, press the Window key on your keyboard if you are using Windows and type in __"cmd."__ If you did this, you should see a **Command Prompt** program selected. If you do see this, then press enter to open the Command Prompt. See the screenshot below for a visual:
 
 ![Music Hub Command Prompt](https://drive.google.com/uc?export=view&id=1Wm6VWv2lLommLWCwDaCcUNhTaGYLGOMQ)
+
+Once you have the Command Prompt open, you should see a small black screen appear with a path name. Don't worry about anything you currently see on this screen. Simply type in the command below and press enter:
+
+> npm install -g npm
+
+If you get something that says __"npm is not a recognized command"__ then that means you need to install Node.js to your machine. Go to this [link](https://nodejs.org/en/download/) and select the installer you need for your machine. Run the installer and you should be fine.
+
+After you have ran the installer through and are sure you have installed Node.js to your machine, go ahead and try the above command again. If it works, then you should see a progress bar pop up in the Command Prompt that will begin to fill. Wait for this installation to finish and you should have the latest version of npm installed and working on your machine. While you are in the same Command Prompt, you want to see if you have nodemon installed. To install it, enter the command below and press enter:
+
+> npm install -g nodemon
+
+**Step 3: Start the Back-End**
+
+Now that you have npm installed, you have the tools necessary to start running my code. To begin, look for where you unzipped the zip file of this project. Inside that project folder, you want to find the back-end folder and go inside of it. Once there, you need to type in the file path __"cmd"__ and press enter. This should open up a similar Command Prompt that now has the file path leading to the back-end folder of this project. Inside this command prompt you want to insert the below command and press enter:
+
+> npm install
+
+Once you have entered the install command, there should be some files that are now being downloaded to this file directory. Let it run until it finishes. Once it is done, you then want to run the next command:
+
+> npm start
+
+If this works correctly, you should see some messages pop up in the Command Prompt that pertain to "nodemon" a separate package I had you install earlier. As long as you don't see any red, then the back-end should now be running perfectly fine. If you have the back-end running, then you can move on to starting the front-end.
+
+**Step 4: Start the Front-End**
+
+Go back to your file directory and navigate to the front-end folder. Just like with the back-end, you want to type in the file path "cmd" and press enter. This should open another Command Prompt that is in the front-end path. Once you are at this Command Prompt, enter in the same commands you used for the back-end installation, starting with the install and then using npm start afterwards.
+
+If you have done this right, then a new web browser tab should open up to my website. And thus, success! Go ahead and explore around the website and see how many ways you can either break it or enjoy it. If you want to know more about what is going on under the hood, then please proceed to the rest of this document.
 
 ## The Stack
 
