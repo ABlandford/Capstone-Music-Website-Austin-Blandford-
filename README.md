@@ -1,6 +1,14 @@
 # Music Hub
 My second attempt at Capstone with a music website that comes with many options and features. From learning tabs for guitar to finding lyrics for a song! I used a multitude of technologies for the full stack of this website. All of them had a core piece in the stack and provided a clean experience for a user when using my website, which I dubbed Music Hub.
 
+## How to Run
+
+For anybody that would like to download the code for my website and test out the features, then you are more than free to do so. For anybody that needs some instruction on how to run my project, this section will detail the steps needed to get Music Hub up and running on your local machine.
+
+**Step 1: Get the Code**
+
+If you know how to navigate Github, then you should be able to figure out how to get my code. However, I'll note that getting my code is easiest by downloading the zip file. To do this, you want to make sure you are in the **"<>Code"** section of this Github respository. If you are in the right spot, there should be a large green button that says
+
 ## The Stack
 
 ### Front-End
