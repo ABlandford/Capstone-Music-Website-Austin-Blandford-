@@ -7,7 +7,7 @@ For anybody that would like to download the code for my website and test out the
 
 **Step 1: Get the Code**
 
-If you know how to navigate Github, then you should be able to figure out how to get my code. However, I'll note that getting my code is easiest by downloading the zip file. To do this, you want to make sure you are in the **"<>Code"** section of this Github respository. If you are in the right spot, there should be a large green button that says **"Code."** Click that button and there should be a dropdown with some options like "Open with Visual Studio", "Open with Github Desktop", and "Download ZIP." I highly recommend clicking the **"Download ZIP"** option. Once you click it, you should have a zip file downloading to your machine. See the screenshot below for a reference if you need it:
+Getting my code is easiest by downloading the zip file. To do this, you want to make sure you are in the **"<>Code"** section of this Github respository. If you are in the right spot, there should be a large green button that says **"Code."** Click that button and there should be a dropdown with some options like "Open with Visual Studio", "Open with Github Desktop", and "Download ZIP." I highly recommend clicking the **"Download ZIP"** option. Once you click it, you should have a zip file downloading to your machine. See the screenshot below for a reference if you need it:
 
 ![Music Hub Github Code Button](https://drive.google.com/uc?export=view&id=1rMxUSDji3xcycFd3hBchO_dpefC_So34)
 
