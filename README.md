@@ -18,5 +18,9 @@ The song page is a simple yet complex page that shows the same information that 
 
 ![Music Hub Disclaimer and Links](https://drive.google.com/uc?export=view&id=1W6MxL-4LjoZ0ZY4AyBADLVWAbJgtpcXu)
 
-Also, if you look more closely, I provide two other links that will allow the user to share the song on their respective Twitter and Facebook account if they have an account.
+Also, if you look more closely, I provide two other links that will allow the user to share the song on their respective Twitter and Facebook account if they have one for those respective sites. There is also a "Favorite this Song" button, which I will go over later.
+
+There is one thing I glanced over with this page that I can now explain, and that is the reviews section. As I stated, I have a rating out of 5 for every song that is available. This rating is being supplied by the users of my website, or the users that would exist if this website were to be hosted on a server. Anyways, I have a textbox with a rating system at the bottom of the Song Page that will take in a user's review and rating of the song. To show that this is working, I made some extra accounts for my website and made different and varying ratings and reviews that would get sent to my database. Of course, I have some measures in place that will check for errors on the passed in data to make sure that the user does indeed send both a rating and a review. Anyways, every time the user goes to a song page, I have the page fetch all available ratings and reviews for the song from my database to then calculate the actual rating average for the song and every individual review gets shown at the bottom of the page, shown via the screenshot below:
+
+![Music Hub Ratings and Reviews](https://drive.google.com/uc?export=view&id=1rAnN5aGjt_-vVtVHz3NeL8xFhvSeAUGg)
 
