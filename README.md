@@ -24,3 +24,6 @@ There is one thing I glanced over with this page that I can now explain, and tha
 
 ![Music Hub Ratings and Reviews](https://drive.google.com/uc?export=view&id=1rAnN5aGjt_-vVtVHz3NeL8xFhvSeAUGg)
 
+The last thing to talk about on the Song Page is the "Favorite this Song" button. To put it bluntly, it does simply what it says on the tin. When a user clicks "Favorite this Song", my website will send a request through my api to my database that will save the current song they are viewing as a favorite for their account. If any user wants to see their favorited tracks then they can make their way to the Favorites Page. See it below:
+
+![Music Hub Favorites Page](https://drive.google.com/uc?export=view&id=17hte8wP3GrsQU2fGEwNyOSg3TvgxqL5R)
