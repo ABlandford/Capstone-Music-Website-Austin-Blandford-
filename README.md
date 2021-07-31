@@ -27,3 +27,9 @@ There is one thing I glanced over with this page that I can now explain, and tha
 The last thing to talk about on the Song Page is the "Favorite this Song" button. To put it bluntly, it does simply what it says on the tin. When a user clicks "Favorite this Song", my website will send a request through my api to my database that will save the current song they are viewing as a favorite for their account. If any user wants to see their favorited tracks then they can make their way to the Favorites Page. See it below:
 
 ![Music Hub Favorites Page](https://drive.google.com/uc?export=view&id=17hte8wP3GrsQU2fGEwNyOSg3TvgxqL5R)
+
+As you can see, the Favorites Page simply contains a full list of the user's favorited tracks. Every entry has two buttons that will either take the user to the Song Page for that track or will delete the song from their favorites. It's a simple page that is a collective list for every track that any user would love to save for another day, which is one I felt was necessary to have in a website like this.
+
+Now, I will be transparent about this, I did not like that I was not able to include the full song track in the Song Page. It was eating at me inside to exclude a core feature that I wanted in my website. However, I had come to the understanding that I would not be able to include these tracks unless I jumped through some extra hoops with a couple extra dollars out of my pocket. Since I couldn't do that, I needed to come up with something new to make up for this loss in a feature. Luckily, through some digging, I found an API that gives me access to a small database of royalty free audio tracks! So, using this API, I went and added a brand new feature to my website that was dubbed the "Royalty Free Section."
+
+![Music Hub Royalty Free Section](https://drive.google.com/uc?export=view&id=13IDwX8_-_ISFG05lEbwiqTO15UXFYxru)
