@@ -11,6 +11,14 @@ If you know how to navigate Github, then you should be able to figure out how to
 
 ![Music Hub Github Code Button](https://drive.google.com/uc?export=view&id=1rMxUSDji3xcycFd3hBchO_dpefC_So34)
 
+Once you have the zip file downloaded to your machine, you want to go to where it was downloaded and then unzip it using your choice of zipping software. I would personally recommend [7zip(click to get 7zip)](https://www.7-zip.org/download.html) myself if you don't have one yet. Once you have the file unzipped, then you can get started.
+
+**Step 2: Start the Code**
+
+Starting up the code is a simple and straight-forward process. First, you want to see if you have npm installed in your machine. To see if you have it installed, press the Window key on your keyboard if you are using Windows and type in __"cmd."__ If you did this, you should see a **Command Prompt** program selected. If you do see this, then press enter to open the Command Prompt. See the screenshot below for a visual:
+
+![Music Hub Command Prompt](https://drive.google.com/uc?export=view&id=1Wm6VWv2lLommLWCwDaCcUNhTaGYLGOMQ)
+
 ## The Stack
 
 ### Front-End
