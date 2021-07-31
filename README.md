@@ -7,7 +7,7 @@ For anybody that would like to download the code for my website and test out the
 
 **Step 1: Get the Code**
 
-If you know how to navigate Github, then you should be able to figure out how to get my code. However, I'll note that getting my code is easiest by downloading the zip file. To do this, you want to make sure you are in the **"<>Code"** section of this Github respository. If you are in the right spot, there should be a large green button that says
+If you know how to navigate Github, then you should be able to figure out how to get my code. However, I'll note that getting my code is easiest by downloading the zip file. To do this, you want to make sure you are in the **"<>Code"** section of this Github respository. If you are in the right spot, there should be a large green button that says **"Code."** Click that button and there should be a dropdown 
 
 ## The Stack
 
