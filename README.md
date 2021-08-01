@@ -3,7 +3,7 @@ My second attempt at Capstone with a music website that comes with many options 
 
 ## Website Demo
 
-Music Hub is still in the state of development and testing. Due to this, Music Hub is not in the most stable state to be able to download and test on your own machine. So, to work around this, I decided to give you a personal demo of my website through a video. Please click this [link]() to view the demo if you want to see how my website works and functions.
+Music Hub is still in the state of development and testing. Due to this, Music Hub is not in the most stable state to be able to download and test on your own machine. So, to work around this, I decided to give you a personal demo of my website through a video. Please click this [link](https://youtu.be/JqByETUF7UQ) to view the demo if you want to see how my website works and functions.
 
 ## The Stack
 
