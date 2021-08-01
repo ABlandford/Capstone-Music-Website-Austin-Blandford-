@@ -1,51 +1,9 @@
 # Music Hub
 My second attempt at Capstone with a music website that comes with many options and features. From learning tabs for guitar to finding lyrics for a song! I used a multitude of technologies for the full stack of this website. All of them had a core piece in the stack and provided a clean experience for a user when using my website, which I dubbed Music Hub.
 
-## How to Run
+## Website Demo
 
-For anybody that would like to download the code for my website and test out the features, then you are more than free to do so. For anybody that needs some instruction on how to run my project, this section will detail the steps needed to get Music Hub up and running on your local machine.
-
-**Step 1: Get the Code**
-
-Getting my code is easiest by downloading the zip file. To do this, you want to make sure you are in the **"<>Code"** section of this Github respository. If you are in the right spot, there should be a large green button that says **"Code."** Click that button and there should be a dropdown with some options like "Open with Visual Studio", "Open with Github Desktop", and "Download ZIP." I highly recommend clicking the **"Download ZIP"** option. Once you click it, you should have a zip file downloading to your machine. See the screenshot below for a reference if you need it:
-
-![Music Hub Github Code Button](https://drive.google.com/uc?export=view&id=1rMxUSDji3xcycFd3hBchO_dpefC_So34)
-
-Once you have the zip file downloaded to your machine, you want to go to where it was downloaded and then unzip it using your choice of zipping software. I would personally recommend [7zip(click to get 7zip)](https://www.7-zip.org/download.html) myself if you don't have one yet. Once you have the file unzipped, then you can get started.
-
-**Step 2: Install NPM**
-
-To start up the code of Music Hub you want to see if you have npm installed in your machine. To see if you have it installed, press the Window key on your keyboard if you are using Windows and type in __"cmd."__ If you did this, you should see a **Command Prompt** program selected. If you do see this, then press enter to open the Command Prompt. See the screenshot below for a visual:
-
-![Music Hub Command Prompt](https://drive.google.com/uc?export=view&id=1Wm6VWv2lLommLWCwDaCcUNhTaGYLGOMQ)
-
-Once you have the Command Prompt open, you should see a small black screen appear with a path name. Don't worry about anything you currently see on this screen. Simply type in the command below and press enter:
-
-> npm install -g npm
-
-If you get something that says __"npm is not a recognized command"__ then that means you need to install Node.js to your machine. Go to this [link](https://nodejs.org/en/download/) and select the installer you need for your machine. Run the installer and you should be fine.
-
-After you have ran the installer through and are sure you have installed Node.js to your machine, go ahead and try the above command again. If it works, then you should see a progress bar pop up in the Command Prompt that will begin to fill. Wait for this installation to finish and you should have the latest version of npm installed and working on your machine. While you are in the same Command Prompt, you want to see if you have nodemon installed. To install it, enter the command below and press enter:
-
-> npm install -g nodemon
-
-**Step 3: Start the Back-End**
-
-Now that you have npm installed, you have the tools necessary to start running my code. To begin, look for where you unzipped the zip file of this project. Inside that project folder, you want to find the back-end folder and go inside of it. Once there, you need to type in the file path __"cmd"__ and press enter. This should open up a similar Command Prompt that now has the file path leading to the back-end folder of this project. Inside this command prompt you want to insert the below command and press enter:
-
-> npm install
-
-Once you have entered the install command, there should be some files that are now being downloaded to this file directory. Let it run until it finishes. Once it is done, you then want to run the next command:
-
-> npm start
-
-If this works correctly, you should see some messages pop up in the Command Prompt that pertain to "nodemon" a separate package I had you install earlier. As long as you don't see any red, then the back-end should now be running perfectly fine. If you have the back-end running, then you can move on to starting the front-end.
-
-**Step 4: Start the Front-End**
-
-Go back to your file directory and navigate to the front-end folder. Just like with the back-end, you want to type in the file path "cmd" and press enter. This should open another Command Prompt that is in the front-end path. Once you are at this Command Prompt, enter in the same commands you used for the back-end installation, starting with the install and then using npm start afterwards.
-
-If you have done this right, then a new web browser tab should open up to my website. And thus, success! Go ahead and explore around the website and see how many ways you can either break it or enjoy it. If you want to know more about what is going on under the hood, then please proceed to the rest of this document.
+Music Hub is still in the state of development and testing. Due to this, Music Hub is not in the most stable state to be able to download and test on your own machine. So, to work around this, I decided to give you a personal demo of my website through a video. Please click this [link]() to view the demo if you want to see how my website works and functions.
 
 ## The Stack
 
